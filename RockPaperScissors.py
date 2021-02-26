@@ -39,7 +39,7 @@ def Rock_Paper_Scissors():
     elif guess == 1 and play != 1:
         if play == 2:
             print(" ")
-            print("I threw a PAPER. Paper covers Rock. I win! ")
+            print("I threw PAPER. Paper covers Rock. I win! ")
         else:
             print(" ")
             print("I threw SCISSORS. Rock breaks Scissors. You win! ")
