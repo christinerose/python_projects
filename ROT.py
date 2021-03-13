@@ -1,8 +1,10 @@
-#import ROT
+print(" ")
+print("**********")
+print(" ")
+
 print("It's fun to create a coded message!")
 
 print(" ")
-print("**********")
 print(" ")
 
 # FIND EXAMPLE
@@ -47,7 +49,6 @@ def rot13():
                 # print(result)  #WORKS
 
     print(" ")
-    print("**********")
     print(" ")
 
     encoded_word = "".join(result)
