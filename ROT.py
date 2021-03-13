@@ -5,7 +5,6 @@ print(" ")
 print("It's fun to create a coded message!")
 
 print(" ")
-print(" ")
 
 # FIND EXAMPLE
 # txt = "Hello, welcome to my world."
