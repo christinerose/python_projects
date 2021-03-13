@@ -1,18 +1,20 @@
 #import ROT
-
-enigma_string = "It's fun to deciper a coded message!"
+print("It's fun to create a coded message!")
 
 print(" ")
 print("**********")
 print(" ")
 
-
+# FIND EXAMPLE
 # txt = "Hello, welcome to my world."
 # x = txt.find("welcome")
 # print(x)
 
 
 # having a difficult time with this. Progress:
+
+result = []
+
 
 def rot13():
 
@@ -25,12 +27,11 @@ def rot13():
     # list like this or dictionary? I'm not sure what to do here.
 
     length = len(rot_message)
-    print("length is", length)
+    #print("length is", length)
 
     for letter in rot_message:
         # print(letter)
 
-        result = []
         for match in (word_given):
             if match == letter:
                 # print(match)  #WORKS
@@ -40,30 +41,21 @@ def rot13():
 
                 # Take number position (position_in_given) and index into word_output with some number, returning letter in string
                 letter_out = word_output[position_in_given]
-                print(letter_out)
+                # print(letter_out)  # WORKS!!!
 
-            for x in range(int(letter_out)):
-            result.append(x)
-            print(result)
+                result.append(letter_out)
+                # print(result)  #WORKS
 
-#        findPos = word_given.find(letter, 0, length)
-#        print(findPos)
+    print(" ")
+    print("**********")
+    print(" ")
 
-    # for position in range(int(word_given)):
-    #     print(position)
+    encoded_word = "".join(result)
+    print('"'+rot_message+'"', "encoded is", encoded_word)
 
-    # letterPosition = match.find(word_given)
-    # print(letterPosition)
-
-        print(" ")
-        print("**********")
-        print(" ")
-
-        print(rot_message)
-
-        print(" ")
-        print("**********")
-        print(" ")
+    print(" ")
+    print("**********")
+    print(" ")
 
 
 rot13()
