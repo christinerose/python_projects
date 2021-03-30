@@ -25,6 +25,7 @@ print(" ")
 
 
 fileName = []
+fileContents = []
 count = 0
 
 print(fileName)
@@ -39,11 +40,15 @@ while count <= 2:
         print("That file exists! \n")
         choiceAction = input(
             "Would you like to: \nA) Read the file\nB) Delete the file and start over\nC) Append the file. ")
+        print("You chose:", choiceAction)
 
-        if choiceAction == A or a:  # read, show contents
-            chooseName = open("fileName.txt", "r")
+        print(" ")
+        print("***********")
+        print(" ")
+
+        if choiceAction == "A" or "a":  # read, show contents
+            chooseName = open(fileName, "r")
             print(chooseName)
-            print("You typed A")
 
         elif choiceAction == B or b:  # delete file and put another empty one in its place
             chooseName.delete  # ????
@@ -60,7 +65,9 @@ while count <= 2:
         contents = (input("Type new contents here: "))
         tempFile.append(contents)
 
-        fileName.append(chooseName)
+        fileName.append(chooseName) #name of file
+        fileContents.append(tempFile)
+
 
         count += 1
 
