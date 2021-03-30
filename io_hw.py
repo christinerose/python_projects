@@ -50,12 +50,12 @@ while count <= 2:
             chooseName = open(fileName, "r")
             print(chooseName)
 
-        elif choiceAction == B or b:  # delete file and put another empty one in its place
+        elif choiceAction == "B" or "b":  # delete file and put another empty one in its place
             chooseName.delete  # ????
             print("File deleted")
             print(" ")
 
-        # elif choiceAction == C or c:  # enter more text to append file
+        # elif choiceAction == "C" or "c":  # enter more text to append file
         #     chooseName.append
         #     print("File appended")
         #     print(" ")
