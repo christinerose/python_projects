@@ -23,6 +23,13 @@ print(" ")
 print("***********")
 print(" ")
 
+# filename = 'ninja.txt'
+# content = 'The ninjas are everywhere.'
+
+# f = open(filename, 'w')
+# f.write(content)
+# f.close()
+
 
 fileName = []
 fileContents = []
@@ -31,7 +38,7 @@ count = 0
 print(fileName)
 print(" ")
 
-while count <= 2:
+while count <= 1:
     chooseName = input("Please choose the file you'd like to open: ")
 
     # elem in fileName(  # if True... ask to choose another)
@@ -47,19 +54,25 @@ while count <= 2:
         print(" ")
 
         if choiceAction == "A" or "a":  # read, show contents
-            #chooseName = open("fileContents.txt", "r")        
+            readFile = open(fileName, "r")        
             print(fileName, ":", fileContents)
-            print(chooseName)
+            #print(chooseName)
 
         elif choiceAction == "B" or "b":  # delete file and put another empty one in its place
-            chooseName.delete  # ????
+            fileName.delete  # ????
             print("File deleted")
             print(" ")
 
         elif choiceAction == "C" or "c":  # enter more text to append file
-            chooseName.append
+            tempAppend = []
+            appendFile = (input("Type more content here: "))
+            fileName.append(appendFile)
+
+            fileContents.append(tempAppend)
+
             print("File appended")
             print(" ")
+            print("File contents: ", fileContents)
             
     else:
         print("That file doesn't exist. What would you like to write in the file?")
