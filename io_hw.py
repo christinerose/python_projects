@@ -23,9 +23,6 @@ print(" ")
 print("*****START*****")
 print(" ")
 
-# filename = 'ninja.txt'
-# content = 'The ninjas are everywhere.'
-
 # f = open(filename, 'w')
 # f.write(content)
 # f.close()
@@ -95,12 +92,12 @@ def main():
         print("*****RESULTS:*****")
         print(" ")
 
-        if choiceAction == "A" or "a":  #WORKS
+        if choiceAction == "A" or "a":  
             # read, show contents
             #show_file(chooseName)
             print("A WORKS")
 
-        elif choiceAction == "B" or "b":  #WORKS!
+        elif choiceAction == "B" or "b":  !
             # delete file and put another empty one in its place
             #delete_file(chooseName)
             print("B WORKS")
