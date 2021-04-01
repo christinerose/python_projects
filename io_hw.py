@@ -84,12 +84,11 @@ def main():
     
     if does_file_exist(chooseName): 
         print("A file called '", chooseName, "' exists! \n")
-        choiceAction = input(
-            "Would you like to: \nA) Read the file\nB) Delete the file and start over\nC) Append the file. ")
+        choiceAction = input("Would you like to: \nA) Read the file\nB) Delete the file and start over\nC) Append the file. ")
         print("You chose:", choiceAction)
 
         print(" ")
-        print("*****RESULTS:*****")
+        print("**********")
         print(" ")
 
         if choiceAction == "A" or "a":  
@@ -97,7 +96,7 @@ def main():
             #show_file(chooseName)
             print("A WORKS")
 
-        elif choiceAction == "B" or "b":  !
+        elif choiceAction == "B" or "b": 
             # delete file and put another empty one in its place
             #delete_file(chooseName)
             print("B WORKS")
@@ -107,10 +106,6 @@ def main():
             addContent = input("Type additional content here: ")
             #append_file(chooseName, addContent)
             print("C WORKS")
-
-        print(" ")
-        print("*****END_RESULTS:*****")
-        print(" ")
 
     else:
         print("That file doesn't exist. Let's create it!")
