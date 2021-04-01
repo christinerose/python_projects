@@ -60,7 +60,7 @@ def show_file(filename): #WORKS!
 def delete_file(filename): #WORKS!
     os.remove(filename)
     f = open("newFile.txt", "x")
-    f.close()
+    #f.close()
 
     print("File deleted")
     print(" ")
@@ -97,17 +97,19 @@ def main():
 
         if choiceAction == "A" or "a":  #WORKS
             # read, show contents
-            show_file(chooseName)
+            #show_file(chooseName)
+            print("A WORKS")
 
         elif choiceAction == "B" or "b":  #WORKS!
             # delete file and put another empty one in its place
-            delete_file(chooseName)
-
+            #delete_file(chooseName)
+            print("B WORKS")
 
         elif choiceAction == "C" or "c":  
             # enter more text to append file
             addContent = input("Type additional content here: ")
             #append_file(chooseName, addContent)
+            print("C WORKS")
 
         print(" ")
         print("*****END_RESULTS:*****")
@@ -120,7 +122,6 @@ def main():
     
 
 main()
-#append_file('newFile.txt', " More and more and more")
 
 print(" ")
 print("*****END_PROGRAM*****")
