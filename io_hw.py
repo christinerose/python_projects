@@ -19,10 +19,6 @@
 # should be able to enter more text, and that text should be 
 # added to the existing text in the file. 
 
-print(" ")
-print("*****START*****")
-print(" ")
-
 # f = open(filename, 'w')
 # f.write(content)
 # f.close()
@@ -111,7 +107,3 @@ def main():
     
 
 main()
-
-print(" ")
-print("*****END_PROGRAM*****")
-print(" ")
