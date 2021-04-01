@@ -20,7 +20,7 @@
 # added to the existing text in the file. 
 
 print(" ")
-print("***********")
+print("*****START*****")
 print(" ")
 
 # filename = 'ninja.txt'
@@ -31,63 +31,95 @@ print(" ")
 # f.close()
 
 
-fileName = []
-fileContents = []
-count = 0
+def does_file_exist(filename):
+    print("testing 'does_file_exist' function")
+    try:
+        f = open(filename, 'r')
+        return True
+    except:
+        return False
 
-print(fileName)
-print(" ")
 
-while count <= 1:
+def write_file(filename, content):
+    f = open(filename, 'w')
+    f.write(content)
+    f.close()
+
+
+def show_file(filename):
+    print('testing "show_file" function')
+    f = open(filename, "r")   
+
+
+def delete_file(filename):
+    pass
+
+
+def append_file(filename, content):
+    addContent = (input("Type more content here: "))
+    chooseName.append(addContent)
+
+    fileContents.append(tempAppend)
+
+
+def main():
+
+    # filename = {ask for filename}
     chooseName = input("Please choose the file you'd like to open: ")
-
-    # elem in fileName(  # if True... ask to choose another)
-
-    if chooseName in fileName:
+    
+    if does_file_exist(chooseName):
         print("A file called '", chooseName, "' exists! \n")
         choiceAction = input(
             "Would you like to: \nA) Read the file\nB) Delete the file and start over\nC) Append the file. ")
         print("You chose:", choiceAction)
 
         print(" ")
-        print("***********")
+        print("*****RESULTS:*****")
         print(" ")
 
         if choiceAction == "A" or "a":  # read, show contents
-            readFile = open(fileName, "r")        
-            print(fileName, ":", fileContents)
-            #print(chooseName)
+            show_file(chooseName)
 
-        elif choiceAction == "B" or "b":  # delete file and put another empty one in its place
-            fileName.delete  # ????
+        elif choiceAction == "B" or "b":  
+            # delete file and put another empty one in its place
+            delete_file(chooseName)
             print("File deleted")
             print(" ")
 
         elif choiceAction == "C" or "c":  # enter more text to append file
-            tempAppend = []
-            appendFile = (input("Type more content here: "))
-            fileName.append(appendFile)
+            append_file(chooseName, addContent)
 
-            fileContents.append(tempAppend)
 
             print("File appended")
             print(" ")
             print("File contents: ", fileContents)
-            
+
+        print(" ")
+        print("*****END_RESULTS:*****")
+        print(" ")
+
     else:
-        print("That file doesn't exist. What would you like to write in the file?")
-        tempFile = []
-        contents = (input("Type new contents here: "))
-        tempFile.append(contents)
+        print("That file doesn't exist. Let's create it!")
+        newContent = (input("Type new contents here: "))
+        write_file(chooseName, newContent)
+    
 
-        fileName.append(chooseName) #name of file
-        fileContents.append(tempFile)
+# print(does_file_exist('ninja.txt'))
+# print(does_file_exist('ninjaxyzxyzxyz.txt'))
 
+# write_file('ninja.txt', 'this is a test')
+# write_file("Test.txt", "This is unreasonably difficult for a beginnger class.")
+# write_file('ninja.txt', 'this is a test of the emergency broadcasting system')
+# write_file('ninja2.txt', 'monkeypants')
 
-        count += 1
+#main()
+
+print("")
+print("*Testing Section*")
+print("")
+
+show_file('Brian')
 
 print(" ")
-print("***********")
+print("*****END_PROGRAM*****")
 print(" ")
-
-print(fileName)
