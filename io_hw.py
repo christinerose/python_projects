@@ -91,21 +91,18 @@ def main():
         print("**********")
         print(" ")
 
-        if choiceAction == "A" or "a":  
+        if choiceAction == "A" or choiceAction == "a":  
             # read, show contents
-            #show_file(chooseName)
-            print("A WORKS")
+            show_file(chooseName)
 
-        elif choiceAction == "B" or "b": 
+        elif choiceAction == "B" or choiceAction == "b": 
             # delete file and put another empty one in its place
-            #delete_file(chooseName)
-            print("B WORKS")
+            delete_file(chooseName)
 
-        elif choiceAction == "C" or "c":  
+        elif choiceAction == "C" or choiceAction == "c":  
             # enter more text to append file
             addContent = input("Type additional content here: ")
-            #append_file(chooseName, addContent)
-            print("C WORKS")
+            append_file(chooseName, addContent)
 
     else:
         print("That file doesn't exist. Let's create it!")
